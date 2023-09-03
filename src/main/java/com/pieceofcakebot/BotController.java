@@ -17,11 +17,11 @@ import static org.telegram.abilitybots.api.objects.Privacy.PUBLIC;
 import static org.telegram.abilitybots.api.util.AbilityUtils.getChatId;
 
 @Component
-public class PieceOfCakeBot extends AbilityBot {
+public class BotController extends AbilityBot {
 
     private final ResponseHandler responseHandler;
 
-    protected PieceOfCakeBot(@Value("${bot.token}") String botToken) {
+    protected BotController(@Value("${bot.token}") String botToken) {
         super(botToken, "pieceOfCakeBot");
         responseHandler = new ResponseHandler(silent, db);
     }

@@ -15,7 +15,7 @@ public class PieceOfCakeBotApplication {
         ConfigurableApplicationContext ctx = SpringApplication.run(PieceOfCakeBotApplication.class, args);
         try {
             TelegramBotsApi botsApi = new TelegramBotsApi(DefaultBotSession.class);
-            botsApi.registerBot(ctx.getBean("pieceOfCakeBot", AbilityBot.class));
+            botsApi.registerBot(ctx.getBean("botController", AbilityBot.class));
         } catch (TelegramApiException e) {
             throw new RuntimeException(e);
         }
